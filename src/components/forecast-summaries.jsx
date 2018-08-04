@@ -4,7 +4,6 @@ import ForecastSummary from './forecast-summary';
 import WeatherIcon from 'react-icons-weather';
 import moment from 'moment';
 
-
 const ForecastSummaries = props => (
   <div className="forecast-summaries">
     {
