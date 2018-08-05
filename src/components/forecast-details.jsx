@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import moment from 'moment';
+import Moment from 'moment';
 
 const ForecastDetails = props => (
+  console.log(props),
   <div className="forecast-details">
     <div className="big-date">
       <span>
-        {moment(props.forecast.date).format('ddd Do MMM')}
+        {Moment(props.forecast.date).format('ddd Do MMM')}
       </span>
     </div>
     <br />
@@ -50,10 +51,10 @@ ForecastDetails.propTypes = {
       min: PropTypes.number,
     }).isRequired,
     humidity: PropTypes.number.isRequired,
-  }).isRequired,
-  wind: PropTypes.shape({
-    speed: PropTypes.number,
-    direction: PropTypes.string,
+    wind: PropTypes.shape({
+      speed: PropTypes.number,
+      direction: PropTypes.string,
+    }).isRequired,
   }).isRequired,
 };
 
