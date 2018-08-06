@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Moment from 'moment';
+import WeatherIcon from 'react-icons-weather';
+import '../styles/forecast-details.scss';
 
 const ForecastDetails = props => (
   <div className="forecast-details">
@@ -10,33 +12,33 @@ const ForecastDetails = props => (
       </span>
     </div>
     <br />
+    <div className="big-icon">
+      <span>
+      {<WeatherIcon name="owm" iconId={props.forecast.icon} flip="horizontal" rotate="90" />}
+      </span>
+    </div>
+
     <div className="temp-max">
       <span>
-        {props.forecast.temperature.max}
+        Max Temperature: {props.forecast.temperature.max}&deg;c
       </span>
     </div>
     <br />
     <div className="temp-min">
       <span>
-        {props.forecast.temperature.min}
+      Min Temperature: {props.forecast.temperature.min}&deg;c
       </span>
     </div>
     <br />
     <div className="big-humidity">
       <span>
-        {props.forecast.humidity}
+      Humidity: {props.forecast.humidity}%
       </span>
     </div>
     <br />
     <div className="wind-speed">
       <span>
-        {props.forecast.wind.speed}
-      </span>
-    </div>
-    <br />
-    <div className="wind-direction">
-      <span>
-        {props.forecast.wind.direction}
+        Wind: {props.forecast.wind.speed}mph {props.forecast.wind.direction}
       </span>
     </div>
   </div>

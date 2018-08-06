@@ -47,6 +47,8 @@ class App extends React.Component {
           location: response.data.location,
           selectedDate: response.data.forecasts[0].date,
         });
+      }).catch(() => {
+        alert('No such town! Try again');
       });
   }
 

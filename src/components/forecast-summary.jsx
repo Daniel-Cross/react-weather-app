@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../styles/forecast-summary.scss';
 
 const ForecastSummary = props => (
   <div className="forecastSummaryContent">
@@ -8,25 +9,21 @@ const ForecastSummary = props => (
         {props.date}
       </span>
     </div>
-    <br />
     <div className="temperature">
       <span>
-        {props.temperature}
+        {props.temperature}&deg;c
       </span>
     </div>
-    <br />
     <div className="description">
       <span>
         {props.description}
       </span>
     </div>
-    <br />
     <div className="icon">
       <span>
         {props.icon}
       </span>
     </div>
-    <br />
     <button onClick={() => props.onSelect(props.date, console.log(props))}>
       More Details
     </button>
