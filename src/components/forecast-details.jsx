@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Moment from 'moment';
 import WeatherIcon from 'react-icons-weather';
 import '../styles/forecast-details.scss';
+import '../styles/wind-icons.scss';
 
 const ForecastDetails = props => (
   <div className="forecast-details">
@@ -38,7 +39,7 @@ const ForecastDetails = props => (
     <br />
     <div className="wind-speed">
       <span>
-        Wind: {props.forecast.wind.speed}mph {props.forecast.wind.direction}
+        Wind: {props.forecast.wind.speed}mph {<i className={"wi wi-towards-nne"} />}
       </span>
     </div>
   </div>
