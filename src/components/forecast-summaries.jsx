@@ -3,7 +3,6 @@ import '../styles/forecast-summaries.scss';
 import ForecastSummary from './forecast-summary';
 import WeatherIcon from 'react-icons-weather';
 import Moment from 'moment';
-import PropTypes from 'prop-types';
 
 const ForecastSummaries = props => (
   <div className="forecast-summaries">
@@ -21,10 +20,5 @@ const ForecastSummaries = props => (
     }
   </div>
 );
-
-ForecastSummaries.propTypes = {
-  onForecastSelect: PropTypes.func.isRequired,
-  selectedDate: PropTypes.number,
-};
 
 export default ForecastSummaries;

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Moment from 'moment';
 
 const ForecastDetails = props => (
-  console.log(props),
   <div className="forecast-details">
     <div className="big-date">
       <span>
@@ -42,6 +41,7 @@ const ForecastDetails = props => (
     </div>
   </div>
 );
+
 
 ForecastDetails.propTypes = {
   forecast: PropTypes.shape({
