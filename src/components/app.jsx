@@ -23,9 +23,9 @@ class App extends React.Component {
     this.handleCitySubmit = this.handleCitySubmit.bind(this);
   }
 
-  handleForecastSelect(date) {
+  handleForecastSelect(event) {
     this.setState({
-      selectedDate: date,
+      selectedDate: parseInt(event.target.value, 10),
     });
   }
 

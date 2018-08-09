@@ -6,6 +6,7 @@ import '../styles/forecast-details.scss';
 import '../styles/wind-icons.scss';
 
 const ForecastDetails = props => (
+  console.log(props),
   <div className="forecast-details">
     <div className="big-date">
       <span>
@@ -45,20 +46,8 @@ const ForecastDetails = props => (
   </div>
 );
 
-
 ForecastDetails.propTypes = {
-  forecast: PropTypes.shape({
-    date: PropTypes.number.isRequired,
-    temperature: PropTypes.shape({
-      max: PropTypes.number,
-      min: PropTypes.number,
-    }).isRequired,
-    humidity: PropTypes.number.isRequired,
-    wind: PropTypes.shape({
-      speed: PropTypes.number,
-      direction: PropTypes.string,
-    }).isRequired,
-  }).isRequired,
+  forecast: PropTypes.shape().isRequired,
 };
 
 export default ForecastDetails;

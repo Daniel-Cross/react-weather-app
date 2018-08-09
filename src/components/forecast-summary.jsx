@@ -24,7 +24,10 @@ const ForecastSummary = props => (
         {props.icon}
       </span>
     </div>
-    <button onClick={() => props.onSelect(props.date, console.log(props))}>
+    <button
+      value={props.date}
+      onClick={props.onForecastSelect}
+    >
       More Details
     </button>
 
@@ -32,10 +35,12 @@ const ForecastSummary = props => (
 );
 
 ForecastSummary.propTypes = {
+  forecast: PropTypes.shape({
   date: PropTypes.string.isRequired,
   temperature: PropTypes.number.isRequired,
   description: PropTypes.string.isRequired,
   icon: PropTypes.object.isRequired,
+  }),
   onForecastSelect: PropTypes.func,
 };
 
