@@ -24,6 +24,7 @@ class App extends React.Component {
   }
 
   handleForecastSelect(event) {
+    console.log(event.target.value);
     this.setState({
       selectedDate: parseInt(event.target.value, 10),
     });

@@ -10,7 +10,7 @@ const ForecastSummaries = props => (
       props.forecasts.map(forecast => (
         <ForecastSummary
           key={forecast.date}
-          date={Moment(forecast.date).format('ddd Do MMM')}
+          date={forecast.date}
           description={forecast.description}
           icon={<WeatherIcon name="owm" iconId={forecast.icon} flip="horizontal" rotate="90" />}
           temperature={forecast.temperature.max}

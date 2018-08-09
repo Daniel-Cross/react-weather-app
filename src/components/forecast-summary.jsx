@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import '../styles/forecast-summary.scss';
+import Moment from 'moment';
 
 const ForecastSummary = props => (
   <div className="forecastSummaryContent">
     <div className="date">
       <span>
-        {props.date}
+        {Moment(props.date).format('ddd Do MMM')}
       </span>
     </div>
     <div className="temperature">
@@ -26,7 +27,7 @@ const ForecastSummary = props => (
     </div>
     <button
       value={props.date}
-      onClick={props.onForecastSelect}
+      onClick={props.onSelect}
     >
       More Details
     </button>
